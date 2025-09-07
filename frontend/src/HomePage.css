@@ -1,0 +1,75 @@
+.home-header {
+  max-width: 600px;
+  text-align: center;
+  /* --- REMOVED --- This line is no longer needed. */
+  /* margin: 0 auto; */
+  padding: 2rem;
+}
+
+.home-header h1 {
+  font-family: 'Uncial Antiqua', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.home-header h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.8rem;
+  color: #a9a9d4;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+/* +++ ADDED +++ Styles for the new text field */
+.question-field .MuiOutlinedInput-root {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+.question-field .MuiOutlinedInput-input {
+  color: #e0e0e0;
+}
+.question-field .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(169, 169, 212, 0.5);
+}
+.question-field .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: #a9a9d4;
+}
+
+/* +++ ADDED +++ Styles for the small suggestions text */
+.suggestions-text {
+  font-size: 0.5rem;
+  color: #a9a9d4;
+  opacity: 0.8;
+  margin-bottom: 2rem;
+}
+
+
+/* ... (button styles remain the same) ... */
+  
+  .home-header p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+  }
+  
+  .home-header button {
+    background-color: #8a2be2; /* Blue violet button */
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 35px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 15px rgba(138, 43, 226, 0.4);
+  }
+  
+  .home-header button:hover {
+    background-color: #9932cc; /* Darker orchid on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+  }

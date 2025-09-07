@@ -1,0 +1,80 @@
+.history-container {
+    max-width: 800px;
+    text-align: left;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .history-container h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 2rem;
+  }
+  
+  .history-container h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #a9a9d4;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(169, 169, 212, 0.3);
+    padding-bottom: 0.5rem;
+  }
+  
+  /* +++ ADDED +++ Style for the new sub-headings */
+  .history-container h3 {
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: #c7c7e1;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .history-container p,
+  .history-container li {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #e0e0e0;
+  }
+  
+  .history-container ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  /* === CHANGED === Targeted this style to a specific class */
+  .history-container ul.bordered-list li {
+    margin-bottom: 1.2rem;
+    padding-left: 1rem;
+    border-left: 2px solid #a9a9d4;
+  }
+  
+  .history-container li {
+    margin-bottom: 1.2rem;
+  }
+  
+  .history-container strong {
+    color: #a9a9d4;
+    font-weight: 600;
+  }
+  
+  .history-container em {
+    font-style: italic;
+    color: #c7c7e1;
+  }
+  
+  /* +++ ADDED +++ Style for the new divider line */
+  .history-container .section-divider {
+    border: none;
+    border-top: 1px solid rgba(169, 169, 212, 0.4);
+    margin: 4rem 0;
+  }

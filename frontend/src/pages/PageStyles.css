@@ -1,0 +1,26 @@
+.page-container {
+    max-width: 800px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .page-container h1 {
+    font-family: 'Uncial Antiqua', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #ffffff;
+    margin-bottom: 2rem;
+  }
+  
+  .page-container p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    color: #e0e0e0;
+  }

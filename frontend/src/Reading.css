@@ -1,0 +1,96 @@
+.reading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+  
+  .reading-container h2 {
+    font-weight: 300;
+    color: #a9a9d4;
+    margin-bottom: 3rem;
+  }
+  
+  .cards-layout {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    perspective: 1000px; /* This enables the 3D effect for child elements */
+  }
+  
+  /* The card container which provides the 3D space */
+  .card {
+    width: 150px;
+    height: 250px;
+    cursor: pointer;
+    background-color: transparent;
+  }
+  
+  /* The inner element that flips */
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* The class added when a card is flipped */
+  .card-inner.is-flipped {
+    transform: rotateY(180deg);
+  }
+  
+  /* Styling for both faces of the card */
+  .card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  
+  /* The back of the card (visible initially) */
+  .card-face-back {
+    background: linear-gradient(135deg, #4c2a85, #8a2be2);
+    border: 0px solid #c3a1e4;
+  }
+  
+  /* The front of the card (hidden initially) */
+  .card-face-front {
+    background-color: #2e1a47;
+    border: 0px solid #a9a9d4;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  
+  .card-face-front h3 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  
+  /* The final reading result area */
+  .reading-result {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1rem 2rem;
+    border-radius: 0px;
+    border: 0px solid #444;
+    max-width: 600px;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
