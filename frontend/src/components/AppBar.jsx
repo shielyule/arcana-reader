@@ -12,7 +12,6 @@ import MenuItem from '@mui/material/MenuItem';
 // MUI Icons
 import MenuIcon from '@mui/icons-material/Menu';
 
-// === CHANGED === Added the 'Home' link to the menuItems array.
 const menuItems = [
   { text: 'Home', path: '/' },
   { text: 'Readings', path: '/readings' },
@@ -28,8 +27,6 @@ function CustomAppBar() {
   const handleMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
   };
-
-
 
   const handleMenuClose = () => {
     setAnchorEl(null);
@@ -47,7 +44,7 @@ function CustomAppBar() {
         sx={{ backgroundColor: 'transparent', boxShadow: 'none' }}
       >
         <Toolbar disableGutters>
-          <Box sx={{ flexGrow: 1 }} />
+          <Box sx={{ flexGrow: 3 }} />
           <IconButton
             size="large"
             edge="end"
@@ -56,6 +53,11 @@ function CustomAppBar() {
             aria-controls="basic-menu"
             aria-haspopup="true"
             onClick={handleMenuOpen}
+            disableRipple
+            sx={{ 
+              pr: 5,
+              '&:hover': { backgroundColor: 'transparent' } 
+            }}
           >
             <MenuIcon />
           </IconButton>
@@ -63,8 +65,11 @@ function CustomAppBar() {
             id="basic-menu"
             anchorEl={anchorEl}
             open={open}
+            // === CHANGED === Corrected the typo in the function name.
             onClose={handleMenuClose}
-            MenuListProps={{ 'aria-labelledby': 'basic-button' }}
+            MenuListProps={{
+              'aria-labelledby': 'basic-button',
+            }}
           >
             {menuItems.map((item) => (
               <MenuItem key={item.text} onClick={() => handleNavigate(item.path)}>
